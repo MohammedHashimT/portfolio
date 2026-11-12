@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammed Hashim T – Flutter Developer</title>
+<meta name="description" content="Flutter developer building cross-platform Android and iOS apps, live on Google Play and the App Store.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5FA; --card:#FFFFFF; --ink:#0F1A2E; --muted:#56627A;
+  --blue:#0B5FD6; --sky:#54C5F8; --line:#DCE3EF; --navy:#0C1B36;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:12px}
+section{padding:80px 0}
+.lead{color:var(--muted);max-width:62ch}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(242,245,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--blue)}
+
+/* hero */
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:800}
+.hero p{margin:22px 0 30px;font-size:19px;color:var(--muted);max-width:50ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;border:2px solid var(--ink)}
+.btn.fill{background:var(--ink);color:#fff}
+.btn.fill:hover{background:var(--blue);border-color:var(--blue)}
+.btn.line:hover{border-color:var(--blue);color:var(--blue)}
+
+/* phone */
+.phone{width:250px;height:500px;margin:0 auto;background:var(--navy);border-radius:38px;padding:12px;box-shadow:0 30px 60px -20px rgba(12,27,54,.45)}
+.screen{position:relative;height:100%;border-radius:28px;background:linear-gradient(170deg,#12315F,#0C1B36);overflow:hidden;color:#fff;padding:28px 20px}
+.screen .notch{position:absolute;top:8px;left:50%;width:70px;height:18px;background:#000;border-radius:12px;transform:translateX(-50%)}
+.screen h4{font-family:var(--display);font-size:18px;margin-top:14px}
+.screen small{color:#9FB6D9;font-size:12px}
+.scanbox{position:relative;width:170px;height:170px;margin:30px auto 24px;border-radius:18px;border:2px solid var(--sky);overflow:hidden}
+.scanbox::before{content:"";position:absolute;inset:18px;background:
+ conic-gradient(#fff 25%,transparent 0 50%,#fff 0 75%,transparent 0) 0 0/22px 22px;opacity:.25}
+.scanline{position:absolute;left:0;right:0;height:3px;background:var(--sky);box-shadow:0 0 14px var(--sky);animation:scan 2.6s ease-in-out infinite alternate}
+@keyframes scan{from{top:6%}to{top:92%}}
+.ok{display:flex;align-items:center;gap:10px;background:rgba(84,197,248,.16);border-radius:12px;padding:10px 12px;font-size:13px}
+.ok b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--sky);color:var(--navy)}
+
+/* about */
+.about{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.facts{display:grid;gap:14px;align-content:start}
+.fact{border-left:4px solid var(--sky);padding:4px 0 4px 16px}
+.fact b{display:block;font-family:var(--display);font-size:22px}
+.fact span{color:var(--muted);font-size:15px}
+
+/* works */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px;margin-top:36px}
+.app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.icon{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:24px;margin-bottom:18px}
+.app h3{font-size:24px;font-weight:700}
+.kind{color:var(--blue);font-weight:700;font-size:14px;margin:2px 0 10px}
+.app p{color:var(--muted);font-size:15.5px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
+.tags span{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:2px 11px;font-size:13px}
+.stores{display:flex;gap:10px;flex-wrap:wrap}
+.stores a{font-size:14px;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:8px;background:var(--ink);color:#fff}
+.stores a:hover{background:var(--blue)}
+.more{margin-top:28px;color:var(--muted)}
+.more a{color:var(--blue);font-weight:700}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:32px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.skill h3{font-size:18px;margin-bottom:10px}
+.skill ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.skill li{background:var(--bg);border-radius:6px;padding:3px 10px;font-size:14px}
+
+/* experience */
+.tl{margin-top:32px;border-left:3px solid var(--line);padding-left:28px;display:grid;gap:34px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-37px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--blue);border:3px solid var(--bg)}
+.job h3{font-size:22px}
+.job .when{color:var(--muted);font-size:14.5px;margin:2px 0 10px}
+.job ul{padding-left:18px;color:var(--muted);font-size:15.5px;max-width:70ch}
+.job li{margin-bottom:5px}
+
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff}
+.contact .lead{color:#B4C3DC}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.links a{padding:12px 22px;border-radius:10px;border:2px solid #fff;text-decoration:none;font-weight:700;font-size:15px}
+.links a:first-child{background:var(--sky);border-color:var(--sky);color:var(--navy)}
+.links a:hover{border-color:var(--sky)}
+footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;padding:20px 0 30px}
+
+@media(max-width:800px){
+  .hero .wrap,.about .wrap{grid-template-columns:1fr}
+  nav ul{gap:14px;font-size:14px}
+  nav ul li:nth-child(n+4){display:none}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){.scanline{animation:none;top:50%}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#top">Hashim.</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Apps</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>I’m Mohammed Hashim T, a Flutter developer.</h1>
+      <p>I build Android and iOS apps from one codebase. My apps for conferences and events are live on Google Play and the App Store.</p>
+      <div class="btns">
+        <a class="btn fill" href="#works">See my apps</a>
+        <a class="btn line" href="Mohammed_Hashim_T_CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="notch"></div>
+        <small>Check-in</small>
+        <h4>Scan attendee badge</h4>
+        <div class="scanbox"><div class="scanline"></div></div>
+        <div class="ok"><b>✓</b><span>Checked in<br><small>Entry verified</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h2>About me</h2>
+      <p class="lead">I’m a software developer in Dubai with 2+ years of experience in Flutter and Dart. I specialize in conference and event apps: QR code scanning, attendee management, event registration, digital certificates and payment receipts.</p>
+      <p class="lead" style="margin-top:14px">I work with GetX and Riverpod for state management, and with Firebase, REST APIs and SQLite for data. I hold an MSc in Computer Science and I’m available immediately.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>5 published apps</b><span>On Google Play, four also on the App Store</span></div>
+      <div class="fact"><b>2+ years</b><span>Building Flutter apps professionally</span></div>
+      <div class="fact"><b>Dubai, UAE</b><span>Open to relocation</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <h2>Apps I’ve built</h2>
+    <p class="lead">Each app below is live in the store. Tap a store button to try it.</p>
+    <div class="grid">
+
+      <article class="app">
+        <div class="icon" style="background:#0B5FD6">C</div>
+        <h3>CIHC 2026</h3>
+        <div class="kind">Conference attendee app</div>
+        <p>Attendees get the schedule, speaker details and event information, with push notifications for announcements.</p>
+        <div class="tags"><span>Flutter</span><span>GetX</span><span>Riverpod</span><span>Firebase</span></div>
+        <div class="stores">
+          <a href="https://play.google.com/store/apps/details?id=com.conferenceprime.cihc" target="_blank" rel="noopener">Google Play</a>
+          <a href="https://apps.apple.com/us/app/cihc-2026/id6811046102" target="_blank" rel="noopener">App Store</a>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="icon" style="background:#0E8F7A">O</div>
+        <h3>OPAIC 2026</h3>
+        <div class="kind">Conference attendee app</div>
+        <p>View conference sessions and event updates, with API-driven content that stays current during the event.</p>
+        <div class="tags"><span>Flutter</span><span>GetX</span><span>Riverpod</span><span>Firebase</span></div>
+        <div class="stores">
+          <a href="https://play.google.com/store/apps/details?id=com.conferenceprime.opai26" target="_blank" rel="noopener">Google Play</a>
+          <a href="https://apps.apple.com/us/app/opaic-2026/id6761682450" target="_blank" rel="noopener">App Store</a>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="icon" style="background:#7A3FD1">P</div>
+        <h3>Prime Exhibitor</h3>
+        <div class="kind">Visitor management app</div>
+        <p>Helps exhibitors manage visitor interactions at conferences and expos. QR code scanning captures visitor details in seconds.</p>
+        <div class="tags"><span>Flutter</span><span>QR scanning</span><span>Firebase</span></div>
+        <div class="stores">
+          <a href="https://play.google.com/store/apps/details?id=com.primeexhibitor.conferenceprime" target="_blank" rel="noopener">Google Play</a>
+          <a href="https://apps.apple.com/us/app/conferenceprime-exhibitor/id6739199295" target="_blank" rel="noopener">App Store</a>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="icon" style="background:#D9822B">R</div>
+        <h3>Rently</h3>
+        <div class="kind">Rental management app</div>
+        <p>Rent and manage equipment, conference tools and devices. Firebase and REST APIs handle listings, bookings and users.</p>
+        <div class="tags"><span>Flutter</span><span>REST API</span><span>Firebase</span></div>
+        <div class="stores">
+          <a href="https://play.google.com/store/apps/details?id=com.mojgenie.rental_app" target="_blank" rel="noopener">Google Play</a>
+        </div>
+      </article>
+
+      <article class="app">
+        <div class="icon" style="background:#C2384E">S</div>
+        <h3>Prime Scanner</h3>
+        <div class="kind">Check-in and badge scanning app</div>
+        <p>Fast, reliable attendee check-in and badge scanning, optimized for PDA devices at event entry points.</p>
+        <div class="tags"><span>Flutter</span><span>PDA devices</span><span>SQLite</span></div>
+        <div class="stores">
+          <a href="https://play.google.com/store/apps/details?id=com.mojgenie.conferenceprimescanningapp" target="_blank" rel="noopener">Google Play</a>
+        </div>
+      </article>
+
+    </div>
+    <p class="more">More projects and practice apps are on <a href="https://github.com/MohammedHashimT/" target="_blank" rel="noopener">my GitHub</a>.</p>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>Core</h3><ul><li>Flutter</li><li>Dart</li></ul></div>
+      <div class="skill"><h3>State management</h3><ul><li>GetX</li><li>Riverpod</li></ul></div>
+      <div class="skill"><h3>Data and backend</h3><ul><li>Firebase Auth</li><li>Firestore</li><li>Cloud Messaging</li><li>REST APIs</li><li>SQLite</li></ul></div>
+      <div class="skill"><h3>Device features</h3><ul><li>QR and barcode scanning</li><li>Camera</li><li>Push notifications</li><li>Local notifications</li><li>PDA devices</li></ul></div>
+      <div class="skill"><h3>Release</h3><ul><li>Google Play Console</li><li>App Store Connect</li><li>APK and AAB builds</li></ul></div>
+      <div class="skill"><h3>Tools</h3><ul><li>Git and GitHub</li><li>Android Studio</li><li>VS Code</li><li>Postman</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:0">
+  <div class="wrap">
+    <h2>Experience and education</h2>
+    <div class="tl">
+      <div class="job">
+        <h3>Flutter Developer, Mojgenie IT Solutions</h3>
+        <div class="when">Mar 2025 – Oct 2026 · Kerala, India</div>
+        <ul>
+          <li>Built and published conference, exhibitor and rental apps with QR scanning, check-in and attendee management.</li>
+          <li>Implemented event registration, digital certificates and payment receipts.</li>
+          <li>Built a check-in app optimized for PDA devices for fast verification at live events.</li>
+          <li>Released and updated apps on Google Play and the App Store.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Flutter Developer, Softroniics</h3>
+        <div class="when">Feb 2024 – Mar 2025 · Kerala, India</div>
+        <ul>
+          <li>Turned UI/UX designs into responsive, reusable Flutter widgets and screens.</li>
+          <li>Integrated REST APIs and third-party packages for data-driven features.</li>
+          <li>Used Git for branching and teamwork, and tested on emulators and real devices.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>MSc Computer Science</h3>
+        <div class="when">2022 – 2024 · Nilgiri College of Arts and Science</div>
+        <ul><li>BSc Computer Science (2019 – 2022), Government Arts and Science College.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let’s build your app</h2>
+    <p class="lead">I’m available immediately and open to relocating. Send me a message about your project or role.</p>
+    <div class="links">
+      <a href="mailto:hashimbabnu272@gmail.com">hashimbabnu272@gmail.com</a>
+      <a href="tel:+971564467381">+971 56 446 7381</a>
+      <a href="https://www.linkedin.com/in/mohammed-hashim-t-824955300/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/MohammedHashimT/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Mohammed Hashim T</footer>
+</body>
+</html>

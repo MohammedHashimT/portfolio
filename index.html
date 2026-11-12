@@ -4,99 +4,129 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mohammed Hashim T – Flutter Developer</title>
-<meta name="description" content="Flutter developer building cross-platform Android and iOS apps, live on Google Play and the App Store.">
+<meta name="description" content="Flutter developer in Dubai building cross-platform Android and iOS apps for conferences and events, live on Google Play and the App Store.">
+<meta name="theme-color" content="#081228">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohammed Hashim T – Flutter Developer">
+<meta property="og:description" content="Cross-platform Android and iOS apps for conferences and events, live on Google Play and the App Store.">
+<meta property="og:image" content="images/profile-photo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F2F5FA; --card:#FFFFFF; --ink:#0F1A2E; --muted:#56627A;
-  --blue:#0B5FD6; --sky:#54C5F8; --line:#DCE3EF; --navy:#0C1B36;
+  --bg:#F4F6FB; --card:#FFFFFF; --ink:#0F1A2E; --muted:#56627A;
+  --blue:#0B5FD6; --sky:#54C5F8; --line:#E0E6F1; --navy:#0C1B36;
   --display:'Bricolage Grotesque',system-ui,sans-serif;
   --body:'DM Sans',system-ui,sans-serif;
+  --shadow:0 1px 2px rgba(15,26,46,.04),0 8px 24px -12px rgba(15,26,46,.12);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
+img{max-width:100%}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
 h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:12px}
-section{padding:80px 0}
+section{padding:88px 0}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
 .lead{color:var(--muted);max-width:62ch}
 
 /* nav */
-header{position:sticky;top:0;z-index:20;background:rgba(242,245,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none}
-nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
-nav ul a{text-decoration:none;color:var(--muted)}
-nav ul a:hover{color:var(--blue)}
+header{position:sticky;top:0;z-index:30;background:rgba(8,18,40,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:800;font-size:21px;text-decoration:none;color:#fff}
+.logo span{color:var(--sky)}
+nav ul{display:flex;align-items:center;gap:26px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:#B4C3DC;font-weight:500}
+nav ul a:hover{color:#fff}
+nav ul a.cta{background:var(--sky);color:var(--navy);padding:8px 18px;border-radius:8px;font-weight:700}
+nav ul a.cta:hover{background:#8FDAFB;color:var(--navy)}
 
 /* hero */
-.hero{padding:72px 0 88px}
-.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(40px,7vw,76px);font-weight:800}
-.hero p{margin:22px 0 30px;font-size:19px;color:var(--muted);max-width:50ch}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+.hero{position:relative;overflow:hidden;padding:84px 0 104px;color:#fff;background:
+  radial-gradient(640px 460px at 76% 42%,rgba(84,197,248,.30),transparent 65%),
+  radial-gradient(560px 380px at 0% 100%,rgba(11,95,214,.40),transparent 60%),
+  linear-gradient(180deg,#081228,#0C1B36)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:48px 48px;
+  -webkit-mask-image:radial-gradient(ellipse at 72% 42%,#000 15%,transparent 72%);mask-image:radial-gradient(ellipse at 72% 42%,#000 15%,transparent 72%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:6px 14px;font-size:14px;font-weight:500;color:#D6E2F5;margin-bottom:24px}
+.status i{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.22)}
+.hero h1{font-size:clamp(40px,6.4vw,70px);font-weight:800;color:#fff}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--sky),#9DB8FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:22px 0 32px;font-size:19px;color:#B4C3DC;max-width:50ch}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;border:2px solid var(--ink)}
-.btn.fill{background:var(--ink);color:#fff}
-.btn.fill:hover{background:var(--blue);border-color:var(--blue)}
-.btn.line:hover{border-color:var(--blue);color:var(--blue)}
+.btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;border:2px solid #fff;transition:.15s}
+.btn.fill{background:var(--sky);border-color:var(--sky);color:var(--navy)}
+.btn.fill:hover{background:#8FDAFB;border-color:#8FDAFB;transform:translateY(-2px)}
+.btn.line{color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.line:hover{border-color:var(--sky);color:var(--sky)}
+.stats{display:flex;flex-wrap:wrap;gap:36px;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14)}
+.stats div b{display:block;font-family:var(--display);font-size:34px;font-weight:800;line-height:1;color:#fff}
+.stats div span{font-size:14px;color:#9FB6D9}
 
-/* phone */
-.phone{width:250px;height:500px;margin:0 auto;background:var(--navy);border-radius:38px;padding:12px;box-shadow:0 30px 60px -20px rgba(12,27,54,.45)}
-.screen{position:relative;height:100%;border-radius:28px;background:linear-gradient(170deg,#12315F,#0C1B36);overflow:hidden;color:#fff;padding:28px 20px}
-.screen .notch{position:absolute;top:8px;left:50%;width:70px;height:18px;background:#000;border-radius:12px;transform:translateX(-50%)}
-.screen h4{font-family:var(--display);font-size:18px;margin-top:14px}
-.screen small{color:#9FB6D9;font-size:12px}
-.scanbox{position:relative;width:170px;height:170px;margin:30px auto 24px;border-radius:18px;border:2px solid var(--sky);overflow:hidden}
-.scanbox::before{content:"";position:absolute;inset:18px;background:
- conic-gradient(#fff 25%,transparent 0 50%,#fff 0 75%,transparent 0) 0 0/22px 22px;opacity:.25}
-.scanline{position:absolute;left:0;right:0;height:3px;background:var(--sky);box-shadow:0 0 14px var(--sky);animation:scan 2.6s ease-in-out infinite alternate}
-@keyframes scan{from{top:6%}to{top:92%}}
-.ok{display:flex;align-items:center;gap:10px;background:rgba(84,197,248,.16);border-radius:12px;padding:10px 12px;font-size:13px}
-.ok b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--sky);color:var(--navy)}
+/* photo stage */
+.stage{position:relative;width:min(440px,100%);aspect-ratio:1/1.14;margin:0 auto}
+.stage::before{content:"";position:absolute;inset:12% -6% -4%;background:radial-gradient(circle,rgba(84,197,248,.5),transparent 66%);filter:blur(46px)}
+.frame{position:absolute;inset:0 7%;border-radius:999px 999px 36px 36px;padding:4px;
+  background:conic-gradient(from var(--a),var(--sky),var(--blue),#7A3FD1,var(--sky));
+  animation:spin 8s linear infinite;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.frame img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 18%;border-radius:995px 995px 32px 32px;background:#0C1B36}
+@keyframes spin{to{--a:360deg}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.chip{position:absolute;z-index:2;padding:7px 16px;border-radius:99px;font-weight:700;font-size:14px;color:#fff;
+  background:rgba(12,27,54,.72);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);animation:float 5s ease-in-out infinite}
+.chip::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sky);margin-right:8px}
+.c1{top:8%;left:0}
+.c2{top:22%;right:-2%;animation-delay:-1.5s}
+.c3{top:46%;right:-6%;animation-delay:-3s}
+.glass{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;
+  background:rgba(255,255,255,.94);color:var(--ink);box-shadow:0 18px 40px -12px rgba(0,0,0,.45);animation:float 6s ease-in-out infinite}
+.glass strong{display:block;font-family:var(--display);font-size:16px;line-height:1.2}
+.glass small{display:block;font-size:12.5px;color:var(--muted)}
+.glass .tick{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#22C55E;color:#fff;font-size:16px;flex:none}
+.g1{left:-6%;top:62%;animation-delay:-2s}
+.g2{right:-2%;bottom:3%;animation-delay:-4s}
 
 /* about */
 .about{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .facts{display:grid;gap:14px;align-content:start}
-.fact{border-left:4px solid var(--sky);padding:4px 0 4px 16px}
+.fact{border-left:4px solid var(--sky);padding:6px 0 6px 18px}
 .fact b{display:block;font-family:var(--display);font-size:22px}
 .fact span{color:var(--muted);font-size:15px}
 
 /* works */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px;margin-top:36px}
-.app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
-.icon{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:24px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-top:36px}
+.app{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.app:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(12,27,54,.25)}
+.app .appicon{height:60px;width:auto;max-width:150px;object-fit:contain;margin-bottom:18px;border-radius:12px;align-self:flex-start}
 .app h3{font-size:24px;font-weight:700}
 .kind{color:var(--blue);font-weight:700;font-size:14px;margin:2px 0 10px}
-.app p{color:var(--muted);font-size:15.5px;flex:1}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
+.app p{color:var(--muted);font-size:15.5px}
+.shots{display:flex;gap:10px;overflow-x:auto;margin:18px 0 6px;padding-bottom:8px;scroll-snap-type:x mandatory}
+.shots img{height:260px;width:auto;border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;flex:none;background:var(--bg)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px;margin-top:auto;padding-top:12px}
 .tags span{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:2px 11px;font-size:13px}
 .stores{display:flex;gap:10px;flex-wrap:wrap}
-.stores a{font-size:14px;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:8px;background:var(--ink);color:#fff}
+.stores a{font-size:14px;font-weight:700;text-decoration:none;padding:9px 16px;border-radius:8px;background:var(--ink);color:#fff;transition:.15s}
 .stores a:hover{background:var(--blue)}
-.more{margin-top:28px;color:var(--muted)}
+.more{margin-top:32px;color:var(--muted)}
 .more a{color:var(--blue);font-weight:700}
-
-
-.icon{overflow:hidden}
-.icon img{width:100%;height:100%;object-fit:cover;display:block}
-.icon.has-img{width:auto;max-width:150px;border:1px solid var(--line)}
-.icon.has-img img{width:auto;max-width:150px;height:62px;object-fit:contain}
-.shots{display:flex;gap:10px;overflow-x:auto;margin:6px 0 16px;padding-bottom:8px;scroll-snap-type:x mandatory}
-.shots:empty{display:none}
-.shots img{height:280px;width:auto;border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;flex:none;background:var(--bg)}
 
 /* skills */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:32px}
-.skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-.skill h3{font-size:18px;margin-bottom:10px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+.skill h3{font-size:18px;margin-bottom:12px}
 .skill ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-.skill li{background:var(--bg);border-radius:6px;padding:3px 10px;font-size:14px}
+.skill li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:14px}
 
 /* experience */
 .tl{margin-top:32px;border-left:3px solid var(--line);padding-left:28px;display:grid;gap:34px}
@@ -112,31 +142,40 @@ nav ul a:hover{color:var(--blue)}
 .contact h2{color:#fff}
 .contact .lead{color:#B4C3DC}
 .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.links a{padding:12px 22px;border-radius:10px;border:2px solid #fff;text-decoration:none;font-weight:700;font-size:15px}
+.links a{padding:12px 22px;border-radius:10px;border:2px solid rgba(255,255,255,.7);text-decoration:none;font-weight:700;font-size:15px;transition:.15s}
 .links a:first-child{background:var(--sky);border-color:var(--sky);color:var(--navy)}
-.links a:hover{border-color:var(--sky)}
-footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;padding:20px 0 30px}
+.links a:hover{border-color:var(--sky);color:var(--sky)}
+.links a:first-child:hover{color:var(--navy);background:#7BD6FB;border-color:#7BD6FB}
+footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;padding:20px 0 30px;border-top:1px solid rgba(255,255,255,.08)}
 
 @media(max-width:800px){
+  .hero{padding:44px 0 72px}
   .hero .wrap,.about .wrap{grid-template-columns:1fr}
+  .stage{order:-1;width:min(300px,86%)}
+  .c3{display:none}
+  .g1{left:-10%}
+  .g2{right:-8%}
+  .glass{padding:9px 12px}
+  .glass strong{font-size:14px}
   nav ul{gap:14px;font-size:14px}
   nav ul li:nth-child(n+4){display:none}
+  nav ul li:last-child{display:block}
   section{padding:56px 0}
 }
-@media(prefers-reduced-motion:reduce){.scanline{animation:none;top:50%}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.app{transition:none}.frame,.chip,.glass{animation:none}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <nav>
-      <a class="logo" href="#top">Hashim.</a>
+      <a class="logo" href="#top">Hashim<span>.</span></a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#works">Apps</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="cta" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -145,22 +184,27 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
 <main id="top">
 <section class="hero">
   <div class="wrap">
-    <div>
-      <h1>I’m Mohammed Hashim T, a Flutter developer.</h1>
-      <p>I build Android and iOS apps from one codebase. My apps for conferences and events are live on Google Play and the App Store.</p>
+    <div class="intro">
+      <span class="status"><i></i>Available immediately · Dubai, UAE</span>
+      <h1>Mohammed Hashim T,<br><em>Flutter developer.</em></h1>
+      <p>I build Android and iOS apps from one codebase. My conference and event apps are live on Google Play and the App Store.</p>
       <div class="btns">
         <a class="btn fill" href="#works">See my apps</a>
         <a class="btn line" href="Mohammed_Hashim_T_CV.pdf" download>Download CV</a>
       </div>
-    </div>
-    <div class="phone" aria-hidden="true">
-      <div class="screen">
-        <div class="notch"></div>
-        <small>Check-in</small>
-        <h4>Scan attendee badge</h4>
-        <div class="scanbox"><div class="scanline"></div></div>
-        <div class="ok"><b>✓</b><span>Checked in<br><small>Entry verified</small></span></div>
+      <div class="stats">
+        <div><b>5</b><span>Published apps</span></div>
+        <div><b>2+</b><span>Years of Flutter</span></div>
+        <div><b>2</b><span>Stores: Play and App Store</span></div>
       </div>
+    </div>
+    <div class="stage">
+      <div class="frame"><img src="images/profile-photo.png" alt="Portrait of Mohammed Hashim T" fetchpriority="high"></div>
+      <span class="chip c1">Flutter</span>
+      <span class="chip c2">Dart</span>
+      <span class="chip c3">Firebase</span>
+      <div class="glass g1"><b class="tick">&#10003;</b><div><strong>Checked in</strong><small>Entry verified</small></div></div>
+      <div class="glass g2"><div><strong>5+ apps live</strong><small>Google Play &amp; App Store</small></div></div>
     </div>
   </div>
 </section>
@@ -168,7 +212,8 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
 <section class="about" id="about">
   <div class="wrap">
     <div>
-      <h2>About me</h2>
+      <span class="eyebrow">About</span>
+      <h2>Mobile apps for events that run live</h2>
       <p class="lead">I’m a software developer in Dubai with 2+ years of experience in Flutter and Dart. I specialize in conference and event apps: QR code scanning, attendee management, event registration, digital certificates and payment receipts.</p>
       <p class="lead" style="margin-top:14px">I work with GetX and Riverpod for state management, and with Firebase, REST APIs and SQLite for data. I hold an MSc in Computer Science and I’m available immediately.</p>
     </div>
@@ -182,22 +227,21 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
 
 <section id="works">
   <div class="wrap">
+    <span class="eyebrow">Work</span>
     <h2>Apps I’ve built</h2>
     <p class="lead">Each app below is live in the store. Tap a store button to try it.</p>
     <div class="grid">
 
-      <article class="app" data-slug="cihc">
-        <!-- <div class="icon" style="background:#0B5FD6">C</div> -->
-        <img src="images\cihc\image (4).jpg" alt="CIHC 2026 app icon" style="height:64px;width:auto;max-width:150px;object-fit:contain;margin-bottom:18px;border-radius:12px">
-
+      <article class="app">
+        <img class="appicon" src="images/cihc/image (4).jpg" alt="CIHC 2026 app icon">
         <h3>CIHC 2026</h3>
         <div class="kind">Conference attendee app</div>
         <p>Attendees get the schedule, speaker details and event information, with push notifications for announcements.</p>
         <div class="shots">
-          <img src="images\cihc\CI 1.png" alt="CIHC screenshot 1">
-          <img src="images\cihc\CI 2.png" alt="CIHC screenshot 2">
-          <img src="images\cihc\CI 3.png" alt="CIHC screenshot 3">
-          <img src="images\cihc\CI 4.png" alt="CIHC screenshot 4">
+          <img loading="lazy" src="images/cihc/CI 1.png" alt="CIHC screenshot 1">
+          <img loading="lazy" src="images/cihc/CI 2.png" alt="CIHC screenshot 2">
+          <img loading="lazy" src="images/cihc/CI 3.png" alt="CIHC screenshot 3">
+          <img loading="lazy" src="images/cihc/CI 4.png" alt="CIHC screenshot 4">
         </div>
         <div class="tags"><span>Flutter</span><span>GetX</span><span>Riverpod</span><span>Firebase</span></div>
         <div class="stores">
@@ -206,17 +250,16 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
         </div>
       </article>
 
-      <article class="app" data-slug="opaic">
-        <!-- <div class="icon" style="background:#0E8F7A">O</div> -->
-        <img src="images\opaic\App icon 2 (1).png" alt="OPAIC 2026 app icon" style="height:64px;width:auto;max-width:150px;object-fit:contain;margin-bottom:18px;border-radius:12px">
+      <article class="app">
+        <img class="appicon" src="images/opaic/App icon 2 (1).png" alt="OPAIC 2026 app icon">
         <h3>OPAIC 2026</h3>
         <div class="kind">Conference attendee app</div>
         <p>View conference sessions and event updates, with API-driven content that stays current during the event.</p>
         <div class="shots">
-          <img src="images\opaic\ss 1.png" alt="OPAIC screenshot 1">
-          <img src="images\opaic\ss 2.png" alt="OPAIC screenshot 2">
-          <img src="images\opaic\ss 3.png" alt="OPAIC screenshot 3">
-          <img src="images\opaic\ss 4.png" alt="OPAIC screenshot 4">
+          <img loading="lazy" src="images/opaic/ss 1.png" alt="OPAIC screenshot 1">
+          <img loading="lazy" src="images/opaic/ss 2.png" alt="OPAIC screenshot 2">
+          <img loading="lazy" src="images/opaic/ss 3.png" alt="OPAIC screenshot 3">
+          <img loading="lazy" src="images/opaic/ss 4.png" alt="OPAIC screenshot 4">
         </div>
         <div class="tags"><span>Flutter</span><span>GetX</span><span>Riverpod</span><span>Firebase</span></div>
         <div class="stores">
@@ -225,17 +268,15 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
         </div>
       </article>
 
-      <article class="app" data-slug="prime_exhibitor">
-        <!-- <div class="icon" style="background:#7A3FD1">P</div> -->
-        <img src="images\prime_exhibitor\1024x500 prime exhibitor.jpg" alt="Prime Exhibitor app icon" style="height:64px;width:auto;max-width:150px;object-fit:contain;margin-bottom:18px;border-radius:12px">
-
+      <article class="app">
+        <img class="appicon" src="images/prime_exhibitor/1024x500 prime exhibitor.jpg" alt="Prime Exhibitor app icon">
         <h3>Prime Exhibitor</h3>
         <div class="kind">Visitor management app</div>
         <p>Helps exhibitors manage visitor interactions at conferences and expos. QR code scanning captures visitor details in seconds.</p>
         <div class="shots">
-          <img src="images\prime_exhibitor\shared image (74).jpg" alt="exhibitor screenshot 1">
-          <img src="images\prime_exhibitor\shared image (79).jpg" alt="exhibitor screenshot 2">
-          <img src="images\prime_exhibitor\shared image (80).jpg" alt="exhibitor screenshot 3">
+          <img loading="lazy" src="images/prime_exhibitor/shared image (74).jpg" alt="Prime Exhibitor screenshot 1">
+          <img loading="lazy" src="images/prime_exhibitor/shared image (79).jpg" alt="Prime Exhibitor screenshot 2">
+          <img loading="lazy" src="images/prime_exhibitor/shared image (80).jpg" alt="Prime Exhibitor screenshot 3">
         </div>
         <div class="tags"><span>Flutter</span><span>QR scanning</span><span>Firebase</span></div>
         <div class="stores">
@@ -244,17 +285,15 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
         </div>
       </article>
 
-      <article class="app" data-slug="rently">
-        <!-- <div class="icon" style="background:#D9822B">R</div> -->
-        <img src="images\rently\rently 1024 by 512 - Copy.png" alt="Rently app icon" style="height:64px;width:auto;max-width:150px;object-fit:contain;margin-bottom:18px;border-radius:12px">
-
+      <article class="app">
+        <img class="appicon" src="images/rently/rently 1024 by 512 - Copy.png" alt="Rently app icon">
         <h3>Rently</h3>
         <div class="kind">Rental management app</div>
         <p>Rent and manage equipment, conference tools and devices. Firebase and REST APIs handle listings, bookings and users.</p>
         <div class="shots">
-          <img src="images\rently\shared image (59).jpg" alt="Rently screenshot 1">
-          <img src="images\rently\shared image (63).jpg" alt="Rently screenshot 2">
-          <img src="images\rently\shared image (64).jpg" alt="Rently screenshot 3">
+          <img loading="lazy" src="images/rently/shared image (59).jpg" alt="Rently screenshot 1">
+          <img loading="lazy" src="images/rently/shared image (63).jpg" alt="Rently screenshot 2">
+          <img loading="lazy" src="images/rently/shared image (64).jpg" alt="Rently screenshot 3">
         </div>
         <div class="tags"><span>Flutter</span><span>REST API</span><span>Firebase</span></div>
         <div class="stores">
@@ -262,18 +301,16 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
         </div>
       </article>
 
-      <article class="app" data-slug="prime_scanner">
-        <!-- <div class="icon" style="background:#C2384E">S</div> -->
-        <img src="images\prime_scanner\1920x1080(16_9) (1).png" alt="Prime Scanner app icon" style="height:64px;width:auto;max-width:150px;object-fit:contain;margin-bottom:18px;border-radius:12px">
-
+      <article class="app">
+        <img class="appicon" src="images/prime_scanner/1920x1080(16_9) (1).png" alt="Prime Scanner app icon">
         <h3>Prime Scanner</h3>
         <div class="kind">Check-in and badge scanning app</div>
         <p>Fast, reliable attendee check-in and badge scanning, optimized for PDA devices at event entry points.</p>
         <div class="shots">
-          <img src="images\prime_scanner\ss 1 2.png" alt="Prime Scanner screenshot 1">
-          <img src="images\prime_scanner\ss 2 2.png" alt="Prime Scanner screenshot 2">
-          <img src="images\prime_scanner\ss 4 2.png" alt="Prime Scanner screenshot 3">
-          <img src="images\prime_scanner\SS 5 1.png" alt="Prime Scanner screenshot 4">
+          <img loading="lazy" src="images/prime_scanner/ss 1 2.png" alt="Prime Scanner screenshot 1">
+          <img loading="lazy" src="images/prime_scanner/ss 2 2.png" alt="Prime Scanner screenshot 2">
+          <img loading="lazy" src="images/prime_scanner/ss 4 2.png" alt="Prime Scanner screenshot 3">
+          <img loading="lazy" src="images/prime_scanner/SS 5 1.png" alt="Prime Scanner screenshot 4">
         </div>
         <div class="tags"><span>Flutter</span><span>PDA devices</span><span>SQLite</span></div>
         <div class="stores">
@@ -288,11 +325,12 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
 
 <section id="skills" style="padding-top:0">
   <div class="wrap">
+    <span class="eyebrow">Toolbox</span>
     <h2>Skills</h2>
     <div class="skills">
       <div class="skill"><h3>Core</h3><ul><li>Flutter</li><li>Dart</li></ul></div>
       <div class="skill"><h3>State management</h3><ul><li>GetX</li><li>Riverpod</li></ul></div>
-      <div class="skill"><h3>Data and backend</h3><ul> <li>PHP</li><li>Laravel</li><li>MySQL</li><li>Firebase Auth</li><li>Firestore</li><li>Cloud Messaging</li><li>REST APIs</li><li>SQLite</li></ul></div>
+      <div class="skill"><h3>Data and backend</h3><ul><li>PHP</li><li>Laravel</li><li>MySQL</li><li>Firebase Auth</li><li>Firestore</li><li>Cloud Messaging</li><li>REST APIs</li><li>SQLite</li></ul></div>
       <div class="skill"><h3>Device features</h3><ul><li>QR and barcode scanning</li><li>Camera</li><li>Push notifications</li><li>Local notifications</li><li>PDA devices</li></ul></div>
       <div class="skill"><h3>Release</h3><ul><li>Google Play Console</li><li>App Store Connect</li><li>APK and AAB builds</li></ul></div>
       <div class="skill"><h3>Tools</h3><ul><li>Git and GitHub</li><li>Android Studio</li><li>VS Code</li><li>Postman</li></ul></div>
@@ -302,6 +340,7 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
 
 <section id="experience" style="padding-top:0">
   <div class="wrap">
+    <span class="eyebrow">Career</span>
     <h2>Experience and education</h2>
     <div class="tl">
       <div class="job">
@@ -347,42 +386,5 @@ footer{background:var(--navy);color:#7F93B5;text-align:center;font-size:14px;pad
 </main>
 
 <footer>© 2026 Mohammed Hashim T</footer>
-<script>
-/* Loads images/<app>/icon.(png|jpg|jpeg|webp) and 1..6 screenshots in the same folder */
-var EXTS=['png','jpg','jpeg','webp'];
-function tryExts(im,base,onFail){
-  var k=0;
-  im.onerror=function(){
-    k++;
-    if(k<EXTS.length){im.src=base+'.'+EXTS[k]}else{onFail()}
-  };
-  im.src=base+'.'+EXTS[0];
-}
-document.querySelectorAll('.app[data-slug]').forEach(function(app){
-  var slug=app.dataset.slug, name=app.querySelector('h3').textContent;
-  var tile=app.querySelector('.icon');
-
-  var ic=new Image();
-  ic.alt=name+' app icon';
-  ic.onload=function(){
-    tile.textContent='';
-    tile.className='icon has-img';
-    tile.style.background='#fff';
-    tile.appendChild(ic);
-  };
-  tryExts(ic,'images/'+slug+'/icon',function(){});
-
-  var shots=document.createElement('div');
-  shots.className='shots';
-  app.insertBefore(shots,app.querySelector('.tags'));
-  for(var i=1;i<=6;i++){
-    var im=new Image();
-    im.alt=name+' screenshot '+i;
-    im.loading='lazy';
-    shots.appendChild(im);
-    (function(im){tryExts(im,'images/'+slug+'/'+im.alt.split(' ').pop(),function(){im.remove()})})(im);
-  }
-});
-</script>
 </body>
 </html>
